@@ -1,0 +1,50 @@
+<!-- <div style="text-align:center" class="content">
+    <p style="font-weight: bold; font-size: 2em;">ANGULAR TESTS</p>
+</div>
+
+<app-input-slider [(inputSliderValue)]="valueSlider1"></app-input-slider>
+<br />
+<p>{{ valueSlider1 }}</p>
+
+<br />
+
+<app-input-slider-value [(ngModel)]="valueSlider2"></app-input-slider-value>
+<br />
+<p>{{ valueSlider2 }}</p>
+
+<br />
+
+<button (click)="changeCondition()">Change Condition</button>
+<div *appUnless="unlessCondition">Teste Unless Directive</div>
+
+<br />
+
+<div *appLet="letItem as data">
+    Data: {{ data }}
+</div>
+<div *appLet="letItem; let data">
+    Data: {{ data }}
+</div>
+
+<br />
+
+<p>ngModel value: {{ outerCounterValue }}</p>
+<form #form="ngForm">
+    <app-counter-input name="counter" [(ngModel)]="outerCounterValue"></app-counter-input>
+</form>
+
+<br /> -->
+
+<ng-template ngFor let-item [ngForOf]="items">
+    <app-select>
+        {{ item }}
+    </app-select>
+</ng-template>
+
+<hr />
+
+<app-select [listValue]="items">
+    teste
+</app-select>
+
+<p *range="[10,15]; let num">{{ num }}</p>
