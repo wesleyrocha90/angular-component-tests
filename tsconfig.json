@@ -14,11 +14,16 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "skipLibCheck": true,
     "lib": [
       "es2018",
       "dom"
     ]
   },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true

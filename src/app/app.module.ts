@@ -12,8 +12,23 @@ import { SelectComponent } from './components/select/select.component';
 import { LetDirective } from './directives/let/let.directive';
 import { CounterInputComponent } from './components/counter-input/counter-input.component';
 import { RangeDirective } from './directives/range/range.directive';
+import { HighlightModule, HIGHLIGHT_OPTIONS, HighlightOptions } from "ngx-highlightjs";
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HighlightModule
+  ],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: <HighlightOptions>{
+        lineNumbers: true
+      }
+    }
+  ],
   declarations: [
     AppComponent,
     InputSliderComponent,
@@ -26,12 +41,6 @@ import { RangeDirective } from './directives/range/range.directive';
     CounterInputComponent,
     RangeDirective
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  providers: [],
   entryComponents: [
     SelectComponent
   ],
